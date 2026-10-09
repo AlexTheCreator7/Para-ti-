@@ -1,0 +1,36 @@
+/* ════════════════════════════════════════════════════════════
+   11. FINAL — corazón 3D
+   ════════════════════════════════════════════════════════════ */
+.finale .inner{overflow:hidden}
+.finale-title{margin:0;font-family:var(--f-display);font-weight:700;font-size:clamp(3.2rem,15vw,8rem);line-height:1;
+  background:linear-gradient(100deg,#ff8fb1 0%,#ffffff 25%,#ff4f7e 50%,#ffc4d6 75%,#ff8fb1 100%);background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shine 6s linear infinite;filter:drop-shadow(0 0 18px rgba(255,79,126,.75)) drop-shadow(0 0 50px rgba(255,79,126,.35))}
+.finale-sub{margin:.6rem 0 0;font-style:italic;font-size:clamp(1.15rem,3.8vw,1.5rem);color:#f4dce6;text-align:center}
+.heart-stage{position:relative;width:min(94vw,52svh,600px);aspect-ratio:1;margin-block:-10px -20px;cursor:pointer;touch-action:pan-y}
+.heart-stage::before{content:'';position:absolute;inset:8%;border-radius:50%;background:radial-gradient(circle,rgba(255,60,110,.28) 0%,rgba(179,60,140,.12) 40%,transparent 68%);animation:halo 1.2s ease-in-out infinite}
+#heartCanvas{position:relative;width:100%;height:100%;display:block}
+.heart-fallback{display:none;position:absolute;inset:0;place-items:center;font-size:min(50vw,260px);color:var(--rose);text-shadow:0 0 40px var(--rose),0 0 90px var(--crimson);animation:lub 1.2s ease-in-out infinite}
+.heart-stage.fallback .heart-fallback{display:grid}
+.heart-stage.fallback canvas{display:none}
+.heart-hint{margin:0 0 22px;font-family:var(--f-display);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);animation:twinkle 2.4s ease-in-out infinite}
+.btn-glow{cursor:pointer;border:1px solid rgba(255,143,177,.6);border-radius:999px;padding:17px 38px;font-family:var(--f-display);font-size:clamp(.82rem,2.6vw,1rem);letter-spacing:.1em;color:#fff;
+  background:linear-gradient(135deg,rgba(255,79,126,.32),rgba(179,155,255,.24));animation:pulseRose 2.4s ease-in-out infinite;transition:scale .25s}
+.btn-glow:hover{scale:1.05}
+@keyframes pulseRose{0%,100%{box-shadow:0 0 20px rgba(255,79,126,.35),inset 0 0 16px rgba(255,79,126,.15)}50%{box-shadow:0 0 50px rgba(255,79,126,.7),inset 0 0 26px rgba(255,79,126,.3)}}
+
+footer{position:relative;z-index:2;padding-top:44px;text-align:center}
+footer p{margin:0;font-style:italic;font-size:1.15rem;color:var(--dim)}
+footer .sigline{font-family:var(--f-script);font-style:normal;font-size:2.1rem;color:var(--rose-2);text-shadow:0 0 14px rgba(255,79,126,.5);margin-top:6px}
+
+/* ── Música ── */
+.music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:50;width:54px;height:54px;border-radius:50%;cursor:pointer;
+  border:1px solid rgba(124,200,255,.45);background:rgba(10,20,42,.75);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  display:flex;align-items:flex-end;justify-content:center;gap:3px;padding-bottom:17px;box-shadow:0 0 22px rgba(124,200,255,.3)}
+.music i{width:3px;height:6px;border-radius:2px;background:var(--blue);box-shadow:0 0 6px var(--blue)}
+.music.on i{animation:eq .9s ease-in-out infinite}
+.music.on i:nth-child(2){animation-delay:-.3s}.music.on i:nth-child(3){animation-delay:-.6s}.music.on i:nth-child(4){animation-delay:-.15s}
+@keyframes eq{0%,100%{height:5px}50%{height:20px}}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:0.01s!important;animation-iteration-count:1!important}
+}

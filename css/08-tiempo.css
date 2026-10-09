@@ -1,0 +1,15 @@
+/* ════════════════════════════════════════════════════════════
+   8. NUESTRO TIEMPO — anillos de luz
+   ════════════════════════════════════════════════════════════ */
+.clock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(10px,3vw,30px);width:100%;max-width:780px}
+.unit{position:relative;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.unit svg{position:absolute;inset:0;width:100%;height:100%;rotate:-90deg;overflow:visible}
+.unit .track{fill:none;stroke:rgba(124,200,255,.12);stroke-width:3}
+.unit .prog{fill:none;stroke:url(#ringGrad);stroke-width:3.5;stroke-linecap:round;transition:stroke-dashoffset .8s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 0 5px rgba(124,200,255,.8))}
+.val{font-family:var(--f-display);font-weight:700;font-size:clamp(1.15rem,5vw,2.6rem);line-height:1;font-variant-numeric:tabular-nums;color:#fff;text-shadow:0 0 14px var(--blue),0 0 30px rgba(61,139,255,.5)}
+.lbl{margin-top:6px;font-family:var(--f-display);font-size:clamp(.5rem,1.8vw,.72rem);letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+.since{margin:2.4rem 0 0;text-align:center;font-style:italic;font-size:1.2rem;color:var(--dim)}
+.beats{margin:.6rem 0 0;text-align:center;font-size:clamp(1.05rem,3.4vw,1.3rem);color:#f3dbe6}
+.beats b{font-family:var(--f-display);color:var(--rose-2);font-variant-numeric:tabular-nums;text-shadow:0 0 12px rgba(255,79,126,.6)}
+.beat-heart{display:inline-block;color:var(--rose);animation:lub 1.2s ease-in-out infinite}
+@keyframes lub{0%,100%{transform:scale(1)}8%{transform:scale(1.3)}18%{transform:scale(1)}28%{transform:scale(1.18)}38%{transform:scale(1)}}

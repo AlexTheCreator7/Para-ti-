@@ -1,0 +1,18 @@
+/* ════════════════════════════════════════════════════════════
+   5. ENCUENTRO — dos mariposas que se buscan (izquierda ↔ derecha)
+   ════════════════════════════════════════════════════════════ */
+
+.meet-stage{position:relative;width:100%;max-width:1200px;height:min(52svh,440px)}
+.meet-trail{position:absolute;top:50%;height:3px;width:50%;translate:0 -50%;border-radius:3px;filter:blur(.4px)}
+.meet-trail.l{left:0;transform-origin:left center;background:linear-gradient(90deg,transparent,rgba(124,200,255,.25) 40%,#bfe6ff);box-shadow:0 0 14px rgba(124,200,255,.8)}
+.meet-trail.r{right:0;transform-origin:right center;background:linear-gradient(270deg,transparent,rgba(179,155,255,.25) 40%,#e0d4ff);box-shadow:0 0 14px rgba(179,155,255,.8)}
+.meet-bf{position:absolute;left:50%;top:50%;width:clamp(64px,11vw,110px);translate:-50% -50%;z-index:2}
+.meet-bf.l{filter:drop-shadow(0 0 6px rgba(124,200,255,.65)) drop-shadow(0 0 16px rgba(61,139,255,.35))}
+.meet-bf.r{filter:drop-shadow(0 0 6px rgba(179,155,255,.65)) drop-shadow(0 0 16px rgba(122,92,255,.35))}
+.meet-bf.l .bf{rotate:90deg}
+.meet-bf.r .bf{rotate:-90deg}
+.meet-heart{position:absolute;left:50%;top:50%;width:clamp(150px,24vw,240px);translate:-50% -50%;overflow:visible}
+.meet-heart path{fill:rgba(255,79,126,0);stroke:#ff8fb1;stroke-width:1.6;filter:drop-shadow(0 0 6px #ff4f7e) drop-shadow(0 0 22px #ff4f7e)}
+.meet-flash{position:absolute;left:50%;top:50%;width:min(80vw,520px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;opacity:0;pointer-events:none;
+  background:radial-gradient(circle,rgba(255,255,255,.95) 0%,rgba(255,170,200,.5) 18%,rgba(179,155,255,.2) 40%,transparent 65%)}
+.meet-text{margin:2rem 0 0;max-width:30ch;text-align:center;font-style:italic;font-size:clamp(1.35rem,4.2vw,2.1rem);line-height:1.45;color:#eef4ff;text-shadow:0 0 18px rgba(124,200,255,.45)}

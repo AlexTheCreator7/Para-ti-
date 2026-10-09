@@ -1,0 +1,22 @@
+/* ════════════════════════════════════════════════════════════
+   10. PROMESAS — carrusel de velas (izquierda → derecha)
+   ════════════════════════════════════════════════════════════ */
+.p-stage{position:relative;width:min(86vw,420px);height:clamp(270px,40vh,320px);perspective:1200px;touch-action:pan-y;cursor:pointer}
+.p-card{position:absolute;inset:0;padding:58px 28px 30px;border-radius:22px;border:1px solid var(--line);background:var(--card);
+  box-shadow:0 18px 50px rgba(0,0,0,.45),inset 0 0 60px rgba(124,200,255,.06);display:flex;flex-direction:column;justify-content:center;gap:12px}
+.p-card:nth-child(even){background:linear-gradient(160deg,rgba(62,40,104,.62),rgba(14,12,36,.84))}
+.p-card + .p-card{opacity:0}
+.p-nav{display:flex;align-items:center;gap:16px;margin-top:30px;width:min(520px,86vw)}
+.p-btn{flex:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:1.5rem;line-height:1;padding-bottom:3px;border:1px solid rgba(232,198,126,.4);background:rgba(232,198,126,.08);color:var(--gold)}
+.h-progress{position:relative;flex:1;height:2px;background:rgba(124,200,255,.14);border-radius:2px}
+.p-count{margin:14px 0 0;font-style:italic;color:var(--dim)}
+.p-count b{font-family:var(--f-display);color:var(--gold)}
+.p-label{font-family:var(--f-display);font-size:.9rem;letter-spacing:.14em;color:var(--gold);text-shadow:0 0 10px rgba(232,198,126,.5)}
+.p-card p{margin:0;font-size:clamp(1.15rem,3.6vw,1.32rem);line-height:1.5;font-style:italic;color:#eef3fb}
+.candle{position:absolute;top:-6px;left:28px;width:12px;height:40px;border-radius:3px 3px 2px 2px;background:linear-gradient(90deg,#cfc6b0,#f4ecd8 45%,#b9ae94)}
+.candle i{position:absolute;left:50%;bottom:100%;width:10px;height:20px;translate:-50% 2px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+  background:radial-gradient(ellipse at 50% 75%,#fff 0%,#ffe9a8 30%,#ffb347 60%,rgba(255,120,40,0) 75%);box-shadow:0 0 18px 6px rgba(255,190,90,.5),0 0 50px 14px rgba(255,160,60,.2);animation:flicker 1.6s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes flicker{0%,100%{transform:scale(1) rotate(-2deg)}25%{transform:scale(1.08,.94) rotate(2deg)}50%{transform:scale(.95,1.06) rotate(-1deg)}75%{transform:scale(1.04,.97) rotate(3deg)}}
+.h-fill{position:absolute;inset:0;background:linear-gradient(90deg,var(--blue),var(--violet),var(--rose-2));transform-origin:left center;transform:scaleX(0);box-shadow:0 0 10px rgba(124,200,255,.8)}
+.h-bf{position:absolute;top:50%;left:0;width:34px;translate:-50% -50%;filter:drop-shadow(0 0 5px rgba(124,200,255,.6))}
+.h-bf .bf{rotate:90deg}

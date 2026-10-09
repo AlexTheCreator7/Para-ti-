@@ -1,0 +1,14 @@
+/* ════════════════════════════════════════════════════════════
+   1. TOKENS — paleta "Corpse Bride": azul de luna, niebla, rosa vivo
+   ════════════════════════════════════════════════════════════ */
+:root{
+  color-scheme: dark;
+  --ink:#04070f; --night:#0a1324; --deep:#0f1b33;
+  --moon:#f6efd9; --blue:#7cc8ff; --blue-2:#3d8bff; --violet:#b39bff;
+  --rose:#ff4f7e; --rose-2:#ff8fb1; --crimson:#d3164a; --gold:#e8c67e;
+  --text:#dbe6f5; --dim:#93a8c6; --line:rgba(140,180,230,.2);
+  --card:linear-gradient(160deg,rgba(32,54,96,.62),rgba(10,18,36,.82));
+  --f-display:'Cinzel Decorative','Cinzel',Georgia,serif;
+  --f-body:'Cormorant Garamond','Crimson Text',Georgia,serif;
+  --f-script:'Pinyon Script','Snell Roundhand','Apple Chancery',cursive;
+}
